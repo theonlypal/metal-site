@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Metal Portfolio</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Landing: black screen with metal icon -->
+  <div id="landing" class="landing">
+    <button id="metalIcon" class="metal-icon" aria-label="Enter site">
+      <span class="metal-core"></span>
+    </button>
+  </div>
+
+  <!-- Main wrapper -->
+  <div id="app" class="app hidden">
+    <!-- Top minimal header -->
+    <header class="top-bar">
+      <div class="brand-dot"></div>
+      <div class="brand-name">METAL INDEX</div>
+      <button id="backToLanding" class="back-btn" aria-label="Back">
+        EXIT
+      </button>
+    </header>
+
+    <!-- Side menu -->
+    <nav class="side-menu">
+      <button class="menu-item" data-section="visuals">
+        VISUAL GALLERY
+      </button>
+      <button class="menu-item" data-section="fashion">
+        FASHION / MERCH
+      </button>
+    </nav>
+
+    <!-- Content area -->
+    <main class="content">
+      <!-- Visual gallery: photos + videos -->
+      <section id="section-visuals" class="section active">
+        <div class="section-title">VISUAL GALLERY</div>
+        <div class="grid">
+          <!-- Replace src paths with your real images/videos -->
+          <figure class="card">
+            <img src="assets/photo1.jpg" alt="Look 01" />
+            <figcaption>look 01</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="assets/photo2.jpg" alt="Look 02" />
+            <figcaption>look 02</figcaption>
+          </figure>
+
+          <figure class="card">
+            <video src="assets/clip1.mp4" muted loop playsinline></video>
+            <figcaption>clip 01</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="assets/photo3.jpg" alt="Fragment" />
+            <figcaption>fragment</figcaption>
+          </figure>
+        </div>
+      </section>
+
+      <!-- Fashion / Merch -->
+      <section id="section-fashion" class="section">
+        <div class="section-title">FASHION / MERCH</div>
+        <div class="grid">
+          <figure class="card">
+            <img src="assets/tee1.png" alt="Metal tee" />
+            <figcaption>tee / 01</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="assets/hoodie1.png" alt="Hoodie" />
+            <figcaption>hood / 01</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="assets/accessory1.png" alt="Accessory" />
+            <figcaption>metal detail</figcaption>
+          </figure>
+
+          <figure class="card">
+            <img src="assets/lookbook1.jpg" alt="Lookbook" />
+            <figcaption>lookbook</figcaption>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Minimal lightbox for fullscreen view (optional but nice) -->
+  <div id="lightbox" class="lightbox hidden">
+    <div class="lightbox-inner">
+      <button id="lightboxClose" class="lightbox-close" aria-label="Close">
+        ×
+      </button>
+      <div id="lightboxContent" class="lightbox-content"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
